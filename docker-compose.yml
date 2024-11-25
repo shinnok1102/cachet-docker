@@ -2,7 +2,7 @@ version: "3"
 
 services:
   postgres:
-    image: postgres:12-alpine
+    image: postgres:17.2-alpine
     volumes:
       - /var/lib/postgresql/data
     environment:
@@ -13,7 +13,7 @@ services:
     build:
       context: .
       args:
-        - cachet_ver=2.4
+        - cachet_ver=3.x
     ports:
       - 80:8000
     links:
